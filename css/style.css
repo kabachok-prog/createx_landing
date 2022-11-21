@@ -16,6 +16,24 @@ html, body {
     height: 100%;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background-color: #3b3b446b;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.overlay--show {
+    visibility: visible;
+    opacity: 1;
+}
+
 .main__cert {
     margin-bottom: -46px;
 }
@@ -89,6 +107,10 @@ html, body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.burger {
+    display: none;
 }
 
 .header__top {}
@@ -309,7 +331,7 @@ html, body {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    /* margin-bottom: 8px; */
+    margin-bottom: 8px;
 }
 
 .heading__tile {
@@ -1461,3 +1483,422 @@ html, body {
 }
 
 .info__map {}
+
+
+/* ---------------------- QUESTIONS ---------------------------------- */
+/* ---------------------- QUESTIONS ---------------------------------- */
+
+
+.main__questions {
+    padding-bottom: 180px;
+}
+
+.questions {}
+
+.questions__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.questions__img {}
+
+.questions__content {
+    margin-left: 30px;
+}
+
+.questions__heading {
+    margin-bottom: 40px;
+}
+
+.questions__form {}
+
+.questions__form-row {
+    display: flex;
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.questions__form-label {
+    margin-right: 25px;
+    flex: 1 1 auto;
+}
+
+.questions__form-label:last-child {
+    margin-right: 0;
+}
+
+.questions__form-text,
+.questions__form-input {
+    display: block;
+    border: 1px solid #D7DADD;
+    border-radius: 4px;
+    padding: 13px 16px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.questions__form-text::placeholder,
+.questions__form-input::placeholder {
+    color: #9A9CA5;
+}
+
+.questions__text-label {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.questions__form-text {
+    resize: none;
+    height: 126px;
+
+}
+
+.questions__checkbox-label {
+    margin-right: 50px;
+    display: flex;
+    width: 100%;
+}
+
+.questions__form-checkbox {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    margin-top: 5px;
+    margin: 5px 12px 0px 0px;
+}
+
+.questions__form-default {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.questions__form-default:checked+.questions__form-custom {
+    background: url("../images/icons/check.svg") 50% 50% no-repeat, #FF3F3A;
+    border: 1px solid #FF3F3A;
+}
+
+
+.questions__form-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #424551;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.questions__form-btn {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* ---------------------- FOOTER -------------------------------------- */
+/* ---------------------- FOOTER -------------------------------------- */
+
+.footer {
+    color: #fff;
+}
+
+.footer__top {
+    background-color: #1E212C;
+    padding: 80px 0 60px;
+}
+
+.footer__top-inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+}
+
+.footer__top-col {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.footer__top-col:first-child {
+    max-width: 310px;
+}
+
+.footer__top-col:last-child {
+    max-width: 315px;
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.footer__top-text {
+    font-size: 12px;
+    line-height: 150%;
+    opacity: 0.6;
+    margin-bottom: 38px;
+}
+
+.footer__socials {
+    display: flex;
+}
+
+.footer__socials-item {
+    margin-right: 20px;
+}
+
+.footer__socials-item:last-child {
+    margin-right: 0;
+}
+
+.footer__socials-link path {
+    transition: all .3s;
+}
+
+.footer__socials-link:hover path {
+    fill: #fff;
+}
+
+.footer__top-title {
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.footer__top-col:last-child .footer__top-title {
+    white-space: normal;
+}
+
+.footer__top-list {}
+
+.footer__top-item {
+    margin-bottom: 8px;
+}
+
+.footer__top-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__item-link {
+    opacity: .6;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+    white-space: nowrap;
+}
+
+.footer__item-link svg {
+    margin-right: 8px;
+}
+
+.footer__item-link:hover {
+    opacity: 1;
+}
+
+.footer__form {}
+
+.footer__form-items {
+    background: #ffffff1f;
+    border: 1px solid #ffffff33;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.footer__form-input {
+    padding: 9px 0px 9px 12px;
+    font-size: 12px;
+    line-height: 150%;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+}
+
+.footer__form-input::placeholder {
+    color: #fff;
+    opacity: .6;
+}
+
+.footer__form-btn {
+    background: transparent;
+    padding: 16px 12px 12px;
+}
+
+.footer__form-btn::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icons/arrow-right-mini.svg") 0 0 / 100% no-repeat;
+    transition: all .3s;
+}
+
+.footer__form-btn:hover::before {
+    transform: scale(1.2);
+}
+
+.footer__form-desc {
+    font-size: 10px;
+    line-height: 150%;
+}
+
+.footer__bottom {
+    background-color: #292C37;
+}
+
+.footer__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer__bottom-copy span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icons/heart.svg") 0 0 / 100% no-repeat;
+    vertical-align: sub;
+}
+
+.footer__go-top {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    opacity: 0.6;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.footer__go-top:hover {
+    opacity: 1;
+}
+
+
+/* ---------------------- MEDIA -------------------------------------- */
+/* ---------------------- MEDIA -------------------------------------- */
+
+@media (max-width: 1100px) {
+    .burger {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 150;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s;
+    }
+
+    .burger--follow {
+        box-shadow: 0 2px 15px #8c8d9e;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 15px;
+        right: 15px;
+    }
+
+    .burger span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #424551;
+        border-radius: 3px;
+        margin: 4px 0;
+    }
+
+    .burger::before,
+    .burger::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #424551;
+        border-radius: 3px;
+    }
+
+    .header {
+        padding-top: 92px;
+    }
+
+    .header__top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 100;
+        min-width: 320px;
+        transform: translateX(100%);
+        transition: all .3s;
+    }
+
+    .header__top--open {
+        transform: translateX(0%);
+    }
+
+    .header__top-inner {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        padding: 100px 0;
+    }
+    
+    .header__top-logo {
+        margin: 0 0 30px 0;
+    }
+
+    .header__nav {
+        text-align: center;
+        margin: 0 auto;
+        flex-grow: 1;
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .header__nav-item {
+        margin: 0;
+    }
+
+    .header__nav-link {
+        display: block;
+        padding: 10px;
+    }
+
+    .header__btn-box {
+        flex-direction: column-reverse;
+    }
+    
+    .header__user {
+        margin-bottom: 30px;
+    }
+
+    .header__top-btn {
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .header__top {
+        min-width: none;
+        left: 0;
+    }
+}
