@@ -7,13 +7,38 @@ $(function () {
         $(this).addClass('direction__filter-btn--active')
     })
 
+// ------------------------------------------
+
     $('.team__slider').slick({
         arrows: false,
         slidesToShow: 4,
         Infinity: true,
         draggable: false,
         appendArrows: $('.team__slider-arrows'),
-        waitForAnimate: false,
+        // waitForAnimate: false,
+        responsive:
+        [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 3
+                },
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 2
+                },
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1,
+                    draggable: true,
+                    dots: true
+                },
+            }
+        ]
     })
 
     $('.team__slider-prew').on('click', function (e) {
@@ -26,10 +51,21 @@ $(function () {
         $('.team__slider').slick('slickNext')
     })
 
+// ----------------------------------------------
+
     $('.testimonials__slider').slick({
         arrows: false,
         appendArrows: $('.testimonials__arrow'),
-        dots: true
+        dots: true,
+        responsive:
+        [
+            {
+                breakpoint: 700,
+                settings: {
+                    
+                },
+            },
+        ]
     })
 
     $('.testimonials__next').on('click', function (e) {
