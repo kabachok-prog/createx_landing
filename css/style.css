@@ -1700,6 +1700,7 @@ html, body {
     margin-bottom: 12px;
     white-space: nowrap;
     pointer-events: none;
+    pointer-events: none;
 }
 
 .footer__top-col:last-child .footer__top-title {
@@ -2381,6 +2382,7 @@ html, body {
     .footer__top-title {
         margin: 0;
         cursor: pointer;
+        pointer-events: all;
     }
 
     .footer__top-list {
