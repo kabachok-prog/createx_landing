@@ -131,3 +131,14 @@ $(function () {
         $(this).next().slideToggle()
     })
 })
+
+let el = document.querySelector('.footer__top-list');
+let elStyles = el.style;
+const pageWidth = document.documentElement.scrollWidth
+const pageHeight = document.documentElement.scrollHeight
+
+$(function () {
+    if (pageWidth > 550 && pageHeight > 550) {
+        elStyles.style = 'display: block;';
+    }
+})
